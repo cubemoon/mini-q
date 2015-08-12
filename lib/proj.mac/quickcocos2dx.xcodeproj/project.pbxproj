@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		198BA5A31B7B70EB00AC71C0 /* lcocos2d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 198BA5A11B7B70EB00AC71C0 /* lcocos2d.cpp */; };
 		19AE56E41B64C92200B02FED /* libluajit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AE56E31B64C92200B02FED /* libluajit.a */; };
 		2EBA8468191B6A6E00256D60 /* SimulatorConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA8454191B6A6E00256D60 /* SimulatorConfig.cpp */; };
 		2EBA846B191B6A8400256D60 /* CCScriptEventDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA8469191B6A8400256D60 /* CCScriptEventDispatcher.cpp */; };
@@ -164,6 +165,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		198BA5A11B7B70EB00AC71C0 /* lcocos2d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lcocos2d.cpp; sourceTree = "<group>"; };
+		198BA5A21B7B70EB00AC71C0 /* lcocos2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcocos2d.h; sourceTree = "<group>"; };
 		19AE55AA1B64C80F00B02FED /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
 		19AE55AB1B64C80F00B02FED /* lua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
 		19AE55AC1B64C80F00B02FED /* lua.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua.hpp; sourceTree = "<group>"; };
@@ -827,6 +830,8 @@
 				F4B4EECB16C7E06F00736FFE /* CCLuaValue.h */,
 				F44E6118182AC7E600016FD1 /* Cocos2dxLuaLoader.cpp */,
 				F44E6119182AC7E600016FD1 /* Cocos2dxLuaLoader.h */,
+				198BA5A11B7B70EB00AC71C0 /* lcocos2d.cpp */,
+				198BA5A21B7B70EB00AC71C0 /* lcocos2d.h */,
 				F4B4EEC316C7E05F00736FFE /* platform */,
 				F44F3C3616EB1B54009ED7F0 /* snapshot.c */,
 				F44F3C3816EB1BE2009ED7F0 /* snapshot.h */,
@@ -1523,6 +1528,7 @@
 				F4E8808D1770071600577406 /* CCComponent.cpp in Sources */,
 				F4E8808E1770071600577406 /* CCComponentContainer.cpp in Sources */,
 				F4E8808F1770071600577406 /* ccCArray.cpp in Sources */,
+				198BA5A31B7B70EB00AC71C0 /* lcocos2d.cpp in Sources */,
 				F4E880901770071600577406 /* TGAlib.cpp in Sources */,
 				F4A3A8EA182DAF700000EDD1 /* ioapi_mem.cpp in Sources */,
 				F4E880911770071600577406 /* tinyxml2.cpp in Sources */,
@@ -1662,19 +1668,11 @@
 					"../cocos2d-x/CocosDenshion/include",
 					"../cocos2d-x/CocosDenshion/mac",
 					"../cocos2d-x/extensions",
-					"../cocos2d-x/extensions/GUI/CCControlExtension",
-					"../cocos2d-x/extensions/GUI/CCEditBox",
-					"../cocos2d-x/external/chipmunk/include",
-					"../cocos2d-x/external/chipmunk/luabinding",
 					"../cocos2d-x/external/extra",
-					"../cocos2d-x/extensions/DragonBones",
 					"../cocos2d-x/external/extra/luabinding",
 					"../cocos2d-x/scripting/lua/cocos2dx_support",
-					"../cocos2d-x/scripting/lua/tolua",
 					"../cocos2d-x/scripting/lua/luajit/include",
-					"../cocos2d-x/scripting/lua/lua_extensions",
-					"../cocos2d-x/scripting/lua/lua_extensions/cjson",
-					"../cocos2d-x/scripting/lua/lua_extensions/zlib",
+					"../cocos2d-x/scripting/lua",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"../cocos2d-x/cocos2dx/platform/third_party/mac/libraries",
@@ -1725,19 +1723,11 @@
 					"../cocos2d-x/CocosDenshion/include",
 					"../cocos2d-x/CocosDenshion/mac",
 					"../cocos2d-x/extensions",
-					"../cocos2d-x/extensions/GUI/CCControlExtension",
-					"../cocos2d-x/extensions/GUI/CCEditBox",
-					"../cocos2d-x/external/chipmunk/include",
-					"../cocos2d-x/external/chipmunk/luabinding",
 					"../cocos2d-x/external/extra",
-					"../cocos2d-x/extensions/DragonBones",
 					"../cocos2d-x/external/extra/luabinding",
 					"../cocos2d-x/scripting/lua/cocos2dx_support",
-					"../cocos2d-x/scripting/lua/tolua",
 					"../cocos2d-x/scripting/lua/luajit/include",
-					"../cocos2d-x/scripting/lua/lua_extensions",
-					"../cocos2d-x/scripting/lua/lua_extensions/cjson",
-					"../cocos2d-x/scripting/lua/lua_extensions/zlib",
+					"../cocos2d-x/scripting/lua",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"../cocos2d-x/cocos2dx/platform/third_party/mac/libraries",

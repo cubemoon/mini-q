@@ -379,18 +379,11 @@
 					"../lib/cocos2d-x/CocosDenshion/include",
 					"../lib/cocos2d-x/CocosDenshion/mac",
 					"../lib/cocos2d-x/extensions",
-					"../lib/cocos2d-x/extensions/GUI/CCControlExtension",
-					"../lib/cocos2d-x/extensions/GUI/CCEditBox",
-					"../lib/cocos2d-x/external/chipmunk/include",
-					"../lib/cocos2d-x/external/chipmunk/luabinding",
 					"../lib/cocos2d-x/external/extra",
 					"../lib/cocos2d-x/external/extra/luabinding",
 					"../lib/cocos2d-x/scripting/lua/cocos2dx_support",
-					"../lib/cocos2d-x/scripting/lua/tolua",
-					"../lib/cocos2d-x/scripting/lua/lua/lua-5.1.5/src",
-					"../lib/cocos2d-x/scripting/lua/lua_extensions",
-					"../lib/cocos2d-x/scripting/lua/lua_extensions/cjson",
-					"../lib/cocos2d-x/scripting/lua/lua_extensions/zlib",
+					"../lib/cocos2d-x/scripting/lua",
+					"../lib/cocos2d-x/scripting/lua/luajit/include",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INFOPLIST_OUTPUT_FORMAT = binary;
@@ -431,18 +424,11 @@
 					"../lib/cocos2d-x/CocosDenshion/include",
 					"../lib/cocos2d-x/CocosDenshion/mac",
 					"../lib/cocos2d-x/extensions",
-					"../lib/cocos2d-x/extensions/GUI/CCControlExtension",
-					"../lib/cocos2d-x/extensions/GUI/CCEditBox",
-					"../lib/cocos2d-x/external/chipmunk/include",
-					"../lib/cocos2d-x/external/chipmunk/luabinding",
 					"../lib/cocos2d-x/external/extra",
 					"../lib/cocos2d-x/external/extra/luabinding",
 					"../lib/cocos2d-x/scripting/lua/cocos2dx_support",
-					"../lib/cocos2d-x/scripting/lua/tolua",
-					"../lib/cocos2d-x/scripting/lua/lua/lua-5.1.5/src",
-					"../lib/cocos2d-x/scripting/lua/lua_extensions",
-					"../lib/cocos2d-x/scripting/lua/lua_extensions/cjson",
-					"../lib/cocos2d-x/scripting/lua/lua_extensions/zlib",
+					"../lib/cocos2d-x/scripting/lua",
+					"../lib/cocos2d-x/scripting/lua/luajit/include",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INFOPLIST_OUTPUT_FORMAT = binary;

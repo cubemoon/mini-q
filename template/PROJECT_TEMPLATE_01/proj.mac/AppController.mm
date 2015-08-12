@@ -34,11 +34,9 @@
 #include "CCDirector.h"
 #include "SimpleAudioEngine.h"
 #include "platform/CCFileUtils.h"
-#include "native/CCNative.h"
 
 using namespace std;
 using namespace cocos2d;
-using namespace cocos2d::extra;
 
 @implementation AppController
 
