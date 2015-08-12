@@ -14,22 +14,22 @@ if [ "$2" != "" ]; then
     DIR=$2
 fi;
 
-QMM_ROOT="$DIR"
+QUICK_COCOS2D_MINI="$DIR"
 
 echo ""
-echo "QMM_ROOT = \"$QMM_ROOT\""
+echo "QUICK_COCOS2D_MINI = \"$QUICK_COCOS2D_MINI\""
 echo ""
 
 # set Xcode
-#defaults write com.apple.dt.Xcode IDEApplicationwideBuildSettings -dict-add QMM_ROOT "$QMM_ROOT"
-#defaults write com.apple.dt.Xcode IDESourceTreeDisplayNames -dict-add QMM_ROOT QMM_ROOT
+#defaults write com.apple.dt.Xcode IDEApplicationwideBuildSettings -dict-add QUICK_COCOS2D_MINI "$QUICK_COCOS2D_MINI"
+#defaults write com.apple.dt.Xcode IDESourceTreeDisplayNames -dict-add QUICK_COCOS2D_MINI QUICK_COCOS2D_MINI
 #IDEApplicationwideBuildSettings=`defaults read com.apple.dt.Xcode IDEApplicationwideBuildSettings`
 #IDESourceTreeDisplayNames=`defaults read com.apple.dt.Xcode IDESourceTreeDisplayNames`
 #
 #echo "> Xcode settings updated."
 
 # set quick player
-#defaults write org.cocos.quick.player QMM_ROOT "$QMM_ROOT"
+#defaults write org.cocos.quick.player QUICK_COCOS2D_MINI "$QUICK_COCOS2D_MINI"
 #echo "> quick player settings updated."
 
 # set .bash_profile or .profile
@@ -39,11 +39,11 @@ else
 PROFILE_NAME=~/.profile
 fi
 
-sed -e '/QMM_ROOT/d' $PROFILE_NAME | sed -e '/add by quick-cocos2d-x setup/d' > $PROFILE_NAME.tmp
+sed -e '/QUICK_COCOS2D_MINI/d' $PROFILE_NAME | sed -e '/add by quick-cocos2d-x setup/d' > $PROFILE_NAME.tmp
 
 DATE=`date "+DATE: %Y-%m-%d TIME: %H:%M:%S"`
 echo "# add by quick-cocos2d-x setup, $DATE" >> $PROFILE_NAME.tmp
-echo "export QMM_ROOT=\`cat ~/.QMM_ROOT\`" >> $PROFILE_NAME.tmp
+echo "export QUICK_COCOS2D_MINI=\`cat ~/.QUICK_COCOS2D_MINI\`" >> $PROFILE_NAME.tmp
 
 DATE=`date "+%Y-%m-%d-%H%M%S"`
 cp $PROFILE_NAME $PROFILE_NAME-$DATE.bak
@@ -51,21 +51,21 @@ cp $PROFILE_NAME.tmp $PROFILE_NAME
 rm $PROFILE_NAME.tmp
 
 echo "> $PROFILE_NAME updated."
-echo "$QMM_ROOT" > ~/.QMM_ROOT
-echo "> ~/.QMM_ROOT updated."
+echo "$QUICK_COCOS2D_MINI" > ~/.QUICK_COCOS2D_MINI
+echo "> ~/.QUICK_COCOS2D_MINI updated."
 echo ""
 
 if [ "$CALL_BY_PKG" != "" ]; then
 
-    $QMM_ROOT/bin/install_luajit.sh
-    ln -s $QMM_ROOT/player/mac/player.app $QMM_ROOT/player.app
+    $QUICK_COCOS2D_MINI/bin/install_luajit.sh
+    ln -s $QUICK_COCOS2D_MINI/player/mac/player.app $QUICK_COCOS2D_MINI/player.app
 
 # else
 
 #     while true; do
 #         read -p "Do you wish to install LuaJIT (Y/N) ? " yn
 #         case $yn in
-#             [Yy]* ) echo ""; $QMM_ROOT/bin/install_luajit.sh; break;;
+#             [Yy]* ) echo ""; $QUICK_COCOS2D_MINI/bin/install_luajit.sh; break;;
 #             [Nn]* ) exit;;
 #             * ) echo "Please answer yes or no.";;
 #         esac

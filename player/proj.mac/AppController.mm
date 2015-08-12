@@ -65,9 +65,9 @@ using namespace cocos2d::extra;
     hasPopupDialog = NO;
     debugLogFile = 0;
 
-    // load QMM_ROOT from ~/.QMM_ROOT
+    // load QUICK_COCOS2D_MINI from ~/.QUICK_COCOS2D_MINI
     NSMutableString *path = [NSMutableString stringWithString:NSHomeDirectory()];
-    [path appendString:@"/.QMM_ROOT"];
+    [path appendString:@"/.QUICK_COCOS2D_MINI"];
     NSError *error = nil;
     NSString *env = [NSString stringWithContentsOfFile:path
                                               encoding:NSUTF8StringEncoding

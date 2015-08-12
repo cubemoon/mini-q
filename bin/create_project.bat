@@ -7,5 +7,5 @@ set TEMPLATE_ROOT=%DIR%..\template
 " 1. 快速切换 qmm 版本
 " 2. 拷贝 qmm/lib 过来就可以保留项目的完整性
 "
-"" link to QMM_ROOT/lib
+"" link to QUICK_COCOS2D_MINI/lib
 " 使用命令行创建一个链接

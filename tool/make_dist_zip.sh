@@ -1,8 +1,8 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-QMM_ROOT=`dirname "$DIR"`
+QUICK_COCOS2D_MINI=`dirname "$DIR"`
 
-cd "$QMM_ROOT"
+cd "$QUICK_COCOS2D_MINI"
 if [ -d tmp ]; then
     rm -fr tmp
 fi;

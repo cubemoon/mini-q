@@ -7,7 +7,7 @@ if [ ! -f $BIN ]; then
     exit
 fi
 
-ARG="-relaunch-off -quick $QMM_ROOT -workdir $DIR"
+ARG="-relaunch-off -quick $QUICK_COCOS2D_MINI -workdir $DIR"
 SIZE="-__SCREEN_ORIENTATION_L__"
 CMD="$BIN $ARG $SIZE"
 

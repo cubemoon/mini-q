@@ -11,5 +11,5 @@ fi
 # 1. 快速切换 qmm 版本
 # 2. 拷贝 qmm/lib 过来就可以保留项目的完整性
 #
-## link to QMM_ROOT/lib
-# ln -sv ${QMM_ROOT}/lib HOW_TO_GET_-o_PATH
+## link to QUICK_COCOS2D_MINI/lib
+# ln -sv ${QUICK_COCOS2D_MINI}/lib HOW_TO_GET_-o_PATH

@@ -83,8 +83,8 @@ QuickXPlayer::QuickXPlayer(void)
 
 int QuickXPlayer::run(void)
 {
-    const char *QMM_ROOT = getenv("QMM_ROOT");
-    SimulatorConfig::sharedDefaults()->setQuickCocos2dxRootPath(QMM_ROOT);
+    const char *QUICK_COCOS2D_MINI = getenv("QUICK_COCOS2D_MINI");
+    SimulatorConfig::sharedDefaults()->setQuickCocos2dxRootPath(QUICK_COCOS2D_MINI);
 
     loadProjectConfig();
     if (!m_project.getProjectDir().length())
