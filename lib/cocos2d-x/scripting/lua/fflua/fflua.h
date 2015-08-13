@@ -1,4 +1,4 @@
-﻿#ifndef _FF_LUA_H_
+#ifndef _FF_LUA_H_
 #define _FF_LUA_H_
 
 #ifndef  _WIN32
@@ -6,7 +6,7 @@
 #endif
 
 #include <stdlib.h>
-#include <lua.hpp>
+#include "lua.hpp"
 
 #include <string>
 using namespace std;

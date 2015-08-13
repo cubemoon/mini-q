@@ -88,7 +88,7 @@ CCLuaStack::~CCLuaStack(void)
 bool CCLuaStack::init(void)
 {
     CCTime::gettimeofdayCocos2d(&m_lasttime, NULL);
-    m_state = lua_open();
+    m_state = luaL_newstate();
     CCAssert(m_state, "create Lua VM failed");
 
     s_map[m_state] = this;
