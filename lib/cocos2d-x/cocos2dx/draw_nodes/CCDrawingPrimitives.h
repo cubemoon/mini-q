@@ -152,6 +152,7 @@ void CC_DLL ccDrawColor4F( GLfloat r, GLfloat g, GLfloat b, GLfloat a );
  */
 void CC_DLL ccPointSize( GLfloat pointSize );
 
+CC_DLL CCPoint ccCardinalSplineAt(CCPoint &p0, CCPoint &p1, CCPoint &p2, CCPoint &p3, float tension, float t);
 // end of global group
 /// @}
 

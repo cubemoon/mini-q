@@ -34,7 +34,6 @@
 #include "CCScheduler.h"
 #include "touch_dispatcher/CCTouch.h"
 #include "touch_dispatcher/CCTouchDispatcher.h"
-#include "actions/CCActionManager.h"
 #include "script_support/CCScriptSupport.h"
 #include "shaders/CCGLProgram.h"
 #include "layers_scenes_transitions_nodes/CCScene.h"
@@ -109,8 +108,6 @@ CCNode::CCNode(void)
 {
     // set default scheduler and actionManager
     CCDirector *director = CCDirector::sharedDirector();
-    m_pActionManager = director->getActionManager();
-    m_pActionManager->retain();
     m_pScheduler = director->getScheduler();
     m_pScheduler->retain();
     m_pComponentContainer = new CCComponentContainer(this);
@@ -122,7 +119,6 @@ CCNode::~CCNode(void)
 
     CCScriptEngineManager::sharedManager()->getScriptEngine()->executeNodeEvent(this, kCCNodeOnDestroy);
 
-    CC_SAFE_RELEASE(m_pActionManager);
     CC_SAFE_RELEASE(m_pScheduler);
     // attributes
     CC_SAFE_RELEASE(m_pCamera);
@@ -627,10 +623,6 @@ CCNode * CCNode::create(void)
 
 void CCNode::cleanup()
 {
-    // actions
-    this->stopAllActions();
-    this->unscheduleAllSelectors();
-
     // timers
     arrayMakeObjectsPerformSelector(m_pChildren, cleanup, CCNode*);
 
@@ -1067,55 +1059,6 @@ void CCNode::onExit()
     }
 }
 
-void CCNode::setActionManager(CCActionManager* actionManager)
-{
-    if( actionManager != m_pActionManager ) {
-        this->stopAllActions();
-        CC_SAFE_RETAIN(actionManager);
-        CC_SAFE_RELEASE(m_pActionManager);
-        m_pActionManager = actionManager;
-    }
-}
-
-CCActionManager* CCNode::getActionManager()
-{
-    return m_pActionManager;
-}
-
-CCAction * CCNode::runAction(CCAction* action)
-{
-    CCAssert( action != NULL, "Argument must be non-nil");
-    m_pActionManager->addAction(action, this, !m_bRunning);
-    return action;
-}
-
-void CCNode::stopAllActions()
-{
-    m_pActionManager->removeAllActionsFromTarget(this);
-}
-
-void CCNode::stopAction(CCAction* action)
-{
-    m_pActionManager->removeAction(action);
-}
-
-void CCNode::stopActionByTag(int tag)
-{
-    CCAssert( tag != kCCActionTagInvalid, "Invalid tag");
-    m_pActionManager->removeActionByTag(tag, this);
-}
-
-CCAction * CCNode::getActionByTag(int tag)
-{
-    CCAssert( tag != kCCActionTagInvalid, "Invalid tag");
-    return m_pActionManager->getActionByTag(tag, this);
-}
-
-unsigned int CCNode::numberOfRunningActions()
-{
-    return m_pActionManager->numberOfRunningActionsInTarget(this);
-}
-
 // CCNode - Callbacks
 
 void CCNode::setScheduler(CCScheduler* scheduler)
@@ -1188,13 +1131,11 @@ void CCNode::unscheduleAllSelectors()
 void CCNode::resumeSchedulerAndActions()
 {
     m_pScheduler->resumeTarget(this);
-    m_pActionManager->resumeTarget(this);
 }
 
 void CCNode::pauseSchedulerAndActions()
 {
     m_pScheduler->pauseTarget(this);
-    m_pActionManager->pauseTarget(this);
 }
 
 // override me

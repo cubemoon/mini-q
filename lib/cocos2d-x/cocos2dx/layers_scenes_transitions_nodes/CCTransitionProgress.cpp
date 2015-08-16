@@ -30,8 +30,6 @@ THE SOFTWARE.
 #include "misc_nodes/CCRenderTexture.h"
 #include "misc_nodes/CCProgressTimer.h"
 #include "CCLayer.h"
-#include "actions/CCActionInstant.h"
-#include "actions/CCActionProgressTimer.h"
 #include "support/CCPointExtension.h"
 
 NS_CC_BEGIN
@@ -66,42 +64,6 @@ void CCTransitionProgress::onEnter()
     CCTransitionScene::onEnter();
 
     setupTransition();
-    
-    // create a transparent color layer
-    // in which we are going to add our rendertextures
-    CCSize size = CCDirector::sharedDirector()->getWinSize();
-
-    // create the second render texture for outScene
-    CCRenderTexture *texture = CCRenderTexture::create((int)size.width, (int)size.height);
-    texture->getSprite()->setAnchorPoint(ccp(0.5f,0.5f));
-    texture->setPosition(ccp(size.width/2, size.height/2));
-    texture->setAnchorPoint(ccp(0.5f,0.5f));
-
-    // render outScene to its texturebuffer
-    texture->clear(0, 0, 0, 1);
-    texture->begin();
-    m_pSceneToBeModified->visit();
-    texture->end();
-
-
-    //    Since we've passed the outScene to the texture we don't need it.
-    if (m_pSceneToBeModified == m_pOutScene)
-    {
-        hideOutShowIn();
-    }
-    //    We need the texture in RenderTexture.
-    CCProgressTimer *pNode = progressTimerNodeWithRenderTexture(texture);
-
-    // create the blend action
-    CCActionInterval* layerAction = (CCActionInterval*)CCSequence::create(
-        CCProgressFromTo::create(m_fDuration, m_fFrom, m_fTo),
-        CCCallFunc::create(this, callfunc_selector(CCTransitionProgress::finish)), 
-        NULL);
-    // run the blend action
-    pNode->runAction(layerAction);
-
-    // add the layer (which contains our two rendertextures) to the scene
-    addChild(pNode, 2, kCCSceneRadial);
 }
 
 // clean up on exit

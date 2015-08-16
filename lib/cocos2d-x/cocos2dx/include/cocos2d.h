@@ -37,21 +37,6 @@ THE SOFTWARE.
 //
 #include "ccConfig.h"
 
-// actions
-#include "actions/CCAction.h"
-#include "actions/CCActionInterval.h"
-#include "actions/CCActionCamera.h"
-#include "actions/CCActionManager.h"
-#include "actions/CCActionEase.h"
-#include "actions/CCActionPageTurn3D.h"
-#include "actions/CCActionGrid.h"
-#include "actions/CCActionProgressTimer.h"
-#include "actions/CCActionGrid3D.h"
-#include "actions/CCActionTiledGrid.h"
-#include "actions/CCActionInstant.h"
-#include "actions/CCActionTween.h"
-#include "actions/CCActionCatmullRom.h"
-
 // base_nodes
 #include "base_nodes/CCNode.h"
 #include "base_nodes/CCAtlasNode.h"

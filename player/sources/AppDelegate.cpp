@@ -35,20 +35,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     // register lua engine
     CCScriptEngineManager::sharedManager()->setScriptEngine(CCLuaEngine::defaultEngine());
     StartupCall *call = StartupCall::create(this);
-    if (m_projectConfig.getDebuggerType() != kCCLuaDebuggerNone)
-    {
-        CCScene *scene = CCScene::create();
-        CCLabelTTF *label = CCLabelTTF::create("WAITING FOR CONNECT TO DEBUGGER...", "Arial", 32);
-        const CCSize winSize = pDirector->getWinSize();
-        label->setPosition(ccp(winSize.width / 2, winSize.height / 2));
-        scene->addChild(label);
-        pDirector->runWithScene(scene);
-        scene->runAction(CCCallFunc::create(call, callfunc_selector(StartupCall::startup)));
-    }
-    else
-    {
-        call->startup();
-    }
+    call->startup();
     
     return true;
 }

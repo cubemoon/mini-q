@@ -41,7 +41,6 @@ NS_CC_BEGIN
 //c/c++ don't support object creation of using class name
 //so, all classes need creation method.
 
-class CCActionInterval;
 class CCNode;
 
 /** @brief CCTransitionEaseScene can ease the actions of the scene protocol.
@@ -50,10 +49,6 @@ class CCNode;
 class CC_DLL CCTransitionEaseScene// : public CCObject
 {
 public:
-    /** returns the Ease action that will be performed on a linear action.
-    @since v0.8.2
-    */
-    virtual CCActionInterval * easeActionWithAction(CCActionInterval * action) = 0;
 };
 
 /** Orientation Type used by some transitions
@@ -220,10 +215,7 @@ public:
     virtual ~CCTransitionMoveInL();
     /** initializes the scenes */
     virtual void initScenes(void);
-    /** returns the action that will be performed */
-    virtual CCActionInterval* action(void);
 
-    virtual CCActionInterval* easeActionWithAction(CCActionInterval * action);
     /**
      *  @js NA
      *  @lua NA
@@ -311,16 +303,13 @@ public:
 
     /** initializes the scenes */
     virtual void initScenes(void);
-    /** returns the action that will be performed by the incoming and outgoing scene */
-    virtual CCActionInterval* action(void);
+
     /**
      *  @js NA
      *  @lua NA
      */
     virtual void onEnter();
     
-    virtual CCActionInterval* easeActionWithAction(CCActionInterval * action);
-
     static CCTransitionSlideInL* create(float t, CCScene* scene);
 protected:
     virtual void sceneOrder();
@@ -344,8 +333,7 @@ public:
 
     /** initializes the scenes */
     virtual void initScenes(void);
-    /** returns the action that will be performed by the incoming and outgoing scene */
-    virtual CCActionInterval* action(void);
+
 
     static CCTransitionSlideInR* create(float t, CCScene* scene);
 protected:
@@ -370,8 +358,7 @@ public:
 
     /** initializes the scenes */
     virtual void initScenes(void);
-    /** returns the action that will be performed by the incoming and outgoing scene */
-    virtual CCActionInterval* action(void);
+
 
     static CCTransitionSlideInB* create(float t, CCScene* scene);
 protected: 
@@ -396,8 +383,7 @@ public:
 
     /** initializes the scenes */
     virtual void initScenes(void);
-    /** returns the action that will be performed by the incoming and outgoing scene */
-    virtual CCActionInterval* action(void);
+
 
     static CCTransitionSlideInT* create(float t, CCScene* scene);
 protected:
@@ -424,7 +410,6 @@ public:
      *  @lua NA
      */
     virtual void onEnter();
-    virtual CCActionInterval* easeActionWithAction(CCActionInterval * action);
 
     static CCTransitionShrinkGrow* create(float t, CCScene* scene);
 };
@@ -680,7 +665,6 @@ public :
      *  @lua NA
      */
     virtual void onEnter();
-    virtual CCActionInterval * easeActionWithAction(CCActionInterval * action);
 
 public:
     static CCTransitionTurnOffTiles* create(float t, CCScene* scene);
@@ -704,13 +688,11 @@ public:
      */
     virtual ~CCTransitionSplitCols();
 
-    virtual CCActionInterval* action(void);
     /**
      *  @js NA
      *  @lua NA
      */
     virtual void onEnter();
-    virtual CCActionInterval * easeActionWithAction(CCActionInterval * action);
 
 public:
 
@@ -733,7 +715,6 @@ public:
      */
     virtual ~CCTransitionSplitRows();
 
-    virtual CCActionInterval* action(void);
 
 public:
 
@@ -755,13 +736,11 @@ public:
      *  @lua NA
      */
     virtual ~CCTransitionFadeTR();
-    virtual CCActionInterval* actionWithSize(const CCSize& size);
     /**
      *  @js NA
      *  @lua NA
      */
     virtual void onEnter();
-    virtual CCActionInterval* easeActionWithAction(CCActionInterval * action);
 
 public:
 
@@ -785,7 +764,6 @@ public:
      *  @lua NA
      */
     virtual ~CCTransitionFadeBL();
-    virtual CCActionInterval* actionWithSize(const CCSize& size);
 
 public:
 
@@ -807,7 +785,6 @@ public:
      *  @lua NA
      */
     virtual ~CCTransitionFadeUp();
-    virtual CCActionInterval* actionWithSize(const CCSize& size);
 
 public:
 
@@ -829,7 +806,6 @@ public:
      *  @lua NA
      */
     virtual ~CCTransitionFadeDown();
-    virtual CCActionInterval* actionWithSize(const CCSize& size);
 
 public:
 

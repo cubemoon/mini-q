@@ -70,19 +70,6 @@
 		F4DE0AAC16800201005DB2DB /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DE0A9E16800201005DB2DB /* CocosDenshion.m */; };
 		F4DE0AAD16800201005DB2DB /* SimpleAudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = F4DE0A9F16800201005DB2DB /* SimpleAudioEngine.mm */; };
 		F4DE0AAF16800201005DB2DB /* SimpleAudioEngine_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DE0AA116800201005DB2DB /* SimpleAudioEngine_objc.m */; };
-		F4E87F37177006E900577406 /* CCAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F16177006E900577406 /* CCAction.cpp */; };
-		F4E87F38177006E900577406 /* CCActionCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F18177006E900577406 /* CCActionCamera.cpp */; };
-		F4E87F39177006E900577406 /* CCActionCatmullRom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F1A177006E900577406 /* CCActionCatmullRom.cpp */; };
-		F4E87F3A177006E900577406 /* CCActionEase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F1C177006E900577406 /* CCActionEase.cpp */; };
-		F4E87F3B177006E900577406 /* CCActionGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F1E177006E900577406 /* CCActionGrid.cpp */; };
-		F4E87F3C177006E900577406 /* CCActionGrid3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F20177006E900577406 /* CCActionGrid3D.cpp */; };
-		F4E87F3D177006E900577406 /* CCActionInstant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F22177006E900577406 /* CCActionInstant.cpp */; };
-		F4E87F3E177006E900577406 /* CCActionInterval.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F24177006E900577406 /* CCActionInterval.cpp */; };
-		F4E87F3F177006E900577406 /* CCActionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F26177006E900577406 /* CCActionManager.cpp */; };
-		F4E87F40177006E900577406 /* CCActionPageTurn3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F28177006E900577406 /* CCActionPageTurn3D.cpp */; };
-		F4E87F41177006E900577406 /* CCActionProgressTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F2A177006E900577406 /* CCActionProgressTimer.cpp */; };
-		F4E87F42177006E900577406 /* CCActionTiledGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F2C177006E900577406 /* CCActionTiledGrid.cpp */; };
-		F4E87F43177006E900577406 /* CCActionTween.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F2E177006E900577406 /* CCActionTween.cpp */; };
 		F4E87F44177006E900577406 /* CCAtlasNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F31177006E900577406 /* CCAtlasNode.cpp */; };
 		F4E87F45177006E900577406 /* CCGLBufferedNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F33177006E900577406 /* CCGLBufferedNode.cpp */; };
 		F4E87F46177006E900577406 /* CCNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F35177006E900577406 /* CCNode.cpp */; };
@@ -323,32 +310,6 @@
 		F4DE0A9F16800201005DB2DB /* SimpleAudioEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleAudioEngine.mm; sourceTree = "<group>"; };
 		F4DE0AA016800201005DB2DB /* SimpleAudioEngine_objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine_objc.h; sourceTree = "<group>"; };
 		F4DE0AA116800201005DB2DB /* SimpleAudioEngine_objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine_objc.m; sourceTree = "<group>"; };
-		F4E87F16177006E900577406 /* CCAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCAction.cpp; sourceTree = "<group>"; };
-		F4E87F17177006E900577406 /* CCAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAction.h; sourceTree = "<group>"; };
-		F4E87F18177006E900577406 /* CCActionCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionCamera.cpp; sourceTree = "<group>"; };
-		F4E87F19177006E900577406 /* CCActionCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionCamera.h; sourceTree = "<group>"; };
-		F4E87F1A177006E900577406 /* CCActionCatmullRom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionCatmullRom.cpp; sourceTree = "<group>"; };
-		F4E87F1B177006E900577406 /* CCActionCatmullRom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionCatmullRom.h; sourceTree = "<group>"; };
-		F4E87F1C177006E900577406 /* CCActionEase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionEase.cpp; sourceTree = "<group>"; };
-		F4E87F1D177006E900577406 /* CCActionEase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionEase.h; sourceTree = "<group>"; };
-		F4E87F1E177006E900577406 /* CCActionGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionGrid.cpp; sourceTree = "<group>"; };
-		F4E87F1F177006E900577406 /* CCActionGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionGrid.h; sourceTree = "<group>"; };
-		F4E87F20177006E900577406 /* CCActionGrid3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionGrid3D.cpp; sourceTree = "<group>"; };
-		F4E87F21177006E900577406 /* CCActionGrid3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionGrid3D.h; sourceTree = "<group>"; };
-		F4E87F22177006E900577406 /* CCActionInstant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionInstant.cpp; sourceTree = "<group>"; };
-		F4E87F23177006E900577406 /* CCActionInstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionInstant.h; sourceTree = "<group>"; };
-		F4E87F24177006E900577406 /* CCActionInterval.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionInterval.cpp; sourceTree = "<group>"; };
-		F4E87F25177006E900577406 /* CCActionInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionInterval.h; sourceTree = "<group>"; };
-		F4E87F26177006E900577406 /* CCActionManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionManager.cpp; sourceTree = "<group>"; };
-		F4E87F27177006E900577406 /* CCActionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionManager.h; sourceTree = "<group>"; };
-		F4E87F28177006E900577406 /* CCActionPageTurn3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionPageTurn3D.cpp; sourceTree = "<group>"; };
-		F4E87F29177006E900577406 /* CCActionPageTurn3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionPageTurn3D.h; sourceTree = "<group>"; };
-		F4E87F2A177006E900577406 /* CCActionProgressTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionProgressTimer.cpp; sourceTree = "<group>"; };
-		F4E87F2B177006E900577406 /* CCActionProgressTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionProgressTimer.h; sourceTree = "<group>"; };
-		F4E87F2C177006E900577406 /* CCActionTiledGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionTiledGrid.cpp; sourceTree = "<group>"; };
-		F4E87F2D177006E900577406 /* CCActionTiledGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionTiledGrid.h; sourceTree = "<group>"; };
-		F4E87F2E177006E900577406 /* CCActionTween.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionTween.cpp; sourceTree = "<group>"; };
-		F4E87F2F177006E900577406 /* CCActionTween.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionTween.h; sourceTree = "<group>"; };
 		F4E87F31177006E900577406 /* CCAtlasNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCAtlasNode.cpp; sourceTree = "<group>"; };
 		F4E87F32177006E900577406 /* CCAtlasNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAtlasNode.h; sourceTree = "<group>"; };
 		F4E87F33177006E900577406 /* CCGLBufferedNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCGLBufferedNode.cpp; sourceTree = "<group>"; };
@@ -867,7 +828,6 @@
 		F4DE084316800187005DB2DB /* cocos2dx */ = {
 			isa = PBXGroup;
 			children = (
-				F4E87F15177006E900577406 /* actions */,
 				F4E87F30177006E900577406 /* base_nodes */,
 				F477B7391757404200260C19 /* CCCamera.cpp */,
 				F477B73A1757404200260C19 /* CCCamera.h */,
@@ -977,39 +937,6 @@
 				F44F3C3816EB1BE2009ED7F0 /* snapshot.h */,
 			);
 			path = cocos2dx_support;
-			sourceTree = "<group>";
-		};
-		F4E87F15177006E900577406 /* actions */ = {
-			isa = PBXGroup;
-			children = (
-				F4E87F16177006E900577406 /* CCAction.cpp */,
-				F4E87F17177006E900577406 /* CCAction.h */,
-				F4E87F18177006E900577406 /* CCActionCamera.cpp */,
-				F4E87F19177006E900577406 /* CCActionCamera.h */,
-				F4E87F1A177006E900577406 /* CCActionCatmullRom.cpp */,
-				F4E87F1B177006E900577406 /* CCActionCatmullRom.h */,
-				F4E87F1C177006E900577406 /* CCActionEase.cpp */,
-				F4E87F1D177006E900577406 /* CCActionEase.h */,
-				F4E87F1E177006E900577406 /* CCActionGrid.cpp */,
-				F4E87F1F177006E900577406 /* CCActionGrid.h */,
-				F4E87F20177006E900577406 /* CCActionGrid3D.cpp */,
-				F4E87F21177006E900577406 /* CCActionGrid3D.h */,
-				F4E87F22177006E900577406 /* CCActionInstant.cpp */,
-				F4E87F23177006E900577406 /* CCActionInstant.h */,
-				F4E87F24177006E900577406 /* CCActionInterval.cpp */,
-				F4E87F25177006E900577406 /* CCActionInterval.h */,
-				F4E87F26177006E900577406 /* CCActionManager.cpp */,
-				F4E87F27177006E900577406 /* CCActionManager.h */,
-				F4E87F28177006E900577406 /* CCActionPageTurn3D.cpp */,
-				F4E87F29177006E900577406 /* CCActionPageTurn3D.h */,
-				F4E87F2A177006E900577406 /* CCActionProgressTimer.cpp */,
-				F4E87F2B177006E900577406 /* CCActionProgressTimer.h */,
-				F4E87F2C177006E900577406 /* CCActionTiledGrid.cpp */,
-				F4E87F2D177006E900577406 /* CCActionTiledGrid.h */,
-				F4E87F2E177006E900577406 /* CCActionTween.cpp */,
-				F4E87F2F177006E900577406 /* CCActionTween.h */,
-			);
-			path = actions;
 			sourceTree = "<group>";
 		};
 		F4E87F30177006E900577406 /* base_nodes */ = {
@@ -1583,23 +1510,10 @@
 				F477B84C1757404200260C19 /* ccFPSImages.c in Sources */,
 				F477B84D1757404200260C19 /* CCScheduler.cpp in Sources */,
 				F477B8581757404200260C19 /* cocos2d.cpp in Sources */,
-				F4E87F37177006E900577406 /* CCAction.cpp in Sources */,
-				F4E87F38177006E900577406 /* CCActionCamera.cpp in Sources */,
-				F4E87F39177006E900577406 /* CCActionCatmullRom.cpp in Sources */,
 				19A749D31B80DD5F00CDCE08 /* lgc.c in Sources */,
-				F4E87F3A177006E900577406 /* CCActionEase.cpp in Sources */,
 				19A749CE1B80DD5F00CDCE08 /* ldblib.c in Sources */,
-				F4E87F3B177006E900577406 /* CCActionGrid.cpp in Sources */,
-				F4E87F3C177006E900577406 /* CCActionGrid3D.cpp in Sources */,
-				F4E87F3D177006E900577406 /* CCActionInstant.cpp in Sources */,
-				F4E87F3E177006E900577406 /* CCActionInterval.cpp in Sources */,
-				F4E87F3F177006E900577406 /* CCActionManager.cpp in Sources */,
-				F4E87F40177006E900577406 /* CCActionPageTurn3D.cpp in Sources */,
 				19A749C81B80DD5F00CDCE08 /* lauxlib.c in Sources */,
 				F44E611A182AC7E600016FD1 /* Cocos2dxLuaLoader.cpp in Sources */,
-				F4E87F41177006E900577406 /* CCActionProgressTimer.cpp in Sources */,
-				F4E87F42177006E900577406 /* CCActionTiledGrid.cpp in Sources */,
-				F4E87F43177006E900577406 /* CCActionTween.cpp in Sources */,
 				F4E87F44177006E900577406 /* CCAtlasNode.cpp in Sources */,
 				F4E87F45177006E900577406 /* CCGLBufferedNode.cpp in Sources */,
 				F4E87F46177006E900577406 /* CCNode.cpp in Sources */,

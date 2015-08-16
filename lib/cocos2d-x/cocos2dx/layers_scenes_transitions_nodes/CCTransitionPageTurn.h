@@ -76,7 +76,6 @@ public:
     */
     virtual bool initWithDuration(float t,CCScene* scene,bool backwards);
 
-    CCActionInterval* actionWithSize(const CCSize& vector);
     /**
      *  @js NA
      *  @lua NA

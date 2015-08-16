@@ -49,7 +49,6 @@ THE SOFTWARE.
 #include "CCApplication.h"
 #include "label_nodes/CCLabelBMFont.h"
 #include "label_nodes/CCLabelAtlas.h"
-#include "actions/CCActionManager.h"
 #include "CCConfiguration.h"
 #include "keypad_dispatcher/CCKeypadDispatcher.h"
 #include "CCAccelerometer.h"
@@ -146,9 +145,7 @@ bool CCDirector::init(void)
 
     // scheduler
     m_pScheduler = new CCScheduler();
-    // action manager
-    m_pActionManager = new CCActionManager();
-    m_pScheduler->scheduleUpdateForTarget(m_pActionManager, kCCPrioritySystem, false);
+   
     // touchDispatcher
     m_pTouchDispatcher = new CCTouchDispatcher();
     m_pTouchDispatcher->init();
@@ -177,7 +174,6 @@ CCDirector::~CCDirector(void)
     CC_SAFE_RELEASE(m_pNotificationNode);
     CC_SAFE_RELEASE(m_pobScenesStack);
     CC_SAFE_RELEASE(m_pScheduler);
-    CC_SAFE_RELEASE(m_pActionManager);
     CC_SAFE_RELEASE(m_pTouchDispatcher);
     CC_SAFE_RELEASE(m_pKeypadDispatcher);
     CC_SAFE_DELETE(m_pAccelerometer);
@@ -1001,8 +997,6 @@ void CCDirector::setActionManager(CCActionManager* pActionManager)
 {
     if (m_pActionManager != pActionManager)
     {
-        CC_SAFE_RETAIN(pActionManager);
-        CC_SAFE_RELEASE(m_pActionManager);
         m_pActionManager = pActionManager;
     }    
 }
