@@ -38,11 +38,9 @@
 #include "CCDirector.h"
 #include "SimpleAudioEngine.h"
 #include "platform/CCFileUtils.h"
-#include "native/CCNative.h"
 
 using namespace std;
 using namespace cocos2d;
-using namespace cocos2d::extra;
 
 @implementation AppController
 
@@ -557,12 +555,10 @@ using namespace cocos2d::extra;
 
 - (void) welcomeGetStarted
 {
-    CCNative::openURL("http://cn.cocos2d-x.org/tutorial/index?type=quick-cocos2d-x");
 }
 
 - (void) welcomeCommunity
 {
-    CCNative::openURL("http://www.cocoachina.com/bbs/thread.php?fid=56");
 }
 
 - (void) welcomeOpenRecent:(cocos2d::CCObject *)object

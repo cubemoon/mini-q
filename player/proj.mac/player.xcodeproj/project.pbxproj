@@ -443,6 +443,7 @@
 					"\"$(QUICK_COCOS2D_MINI)/lib/cocos2d-x/scripting/lua/lua_extensions\"",
 					"\"$(QUICK_COCOS2D_MINI)/lib/cocos2d-x/scripting/lua/lua_extensions/cjson\"",
 					"\"$(QUICK_COCOS2D_MINI)/lib/cocos2d-x/scripting/lua/lua_extensions/zlib\"",
+					"\"../../lib/cocos2d-x/scripting/lua/lua/src\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INFOPLIST_OUTPUT_FORMAT = binary;
@@ -499,6 +500,7 @@
 					"\"$(QUICK_COCOS2D_MINI)/lib/cocos2d-x/scripting/lua/lua_extensions\"",
 					"\"$(QUICK_COCOS2D_MINI)/lib/cocos2d-x/scripting/lua/lua_extensions/cjson\"",
 					"\"$(QUICK_COCOS2D_MINI)/lib/cocos2d-x/scripting/lua/lua_extensions/zlib\"",
+					"\"../../lib/cocos2d-x/scripting/lua/lua/src\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INFOPLIST_OUTPUT_FORMAT = binary;
