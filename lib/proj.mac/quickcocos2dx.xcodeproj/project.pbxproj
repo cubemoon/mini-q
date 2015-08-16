@@ -107,9 +107,6 @@
 		F4E8806A1770071600577406 /* CCLabelTTF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87FA51770071500577406 /* CCLabelTTF.cpp */; };
 		F4E8806B1770071600577406 /* CCLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87FA81770071500577406 /* CCLayer.cpp */; };
 		F4E8806C1770071600577406 /* CCScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87FAA1770071500577406 /* CCScene.cpp */; };
-		F4E8806D1770071600577406 /* CCTransition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87FAC1770071500577406 /* CCTransition.cpp */; };
-		F4E8806E1770071600577406 /* CCTransitionPageTurn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87FAE1770071500577406 /* CCTransitionPageTurn.cpp */; };
-		F4E8806F1770071600577406 /* CCTransitionProgress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87FB01770071500577406 /* CCTransitionProgress.cpp */; };
 		F4E880721770071600577406 /* CCClippingNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87FB81770071500577406 /* CCClippingNode.cpp */; };
 		F4E880731770071600577406 /* CCClippingRegionNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87FBA1770071500577406 /* CCClippingRegionNode.cpp */; };
 		F4E880741770071600577406 /* CCMotionStreak.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87FBC1770071500577406 /* CCMotionStreak.cpp */; };
@@ -395,12 +392,6 @@
 		F4E87FA91770071500577406 /* CCLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLayer.h; sourceTree = "<group>"; };
 		F4E87FAA1770071500577406 /* CCScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCScene.cpp; sourceTree = "<group>"; };
 		F4E87FAB1770071500577406 /* CCScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScene.h; sourceTree = "<group>"; };
-		F4E87FAC1770071500577406 /* CCTransition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCTransition.cpp; sourceTree = "<group>"; };
-		F4E87FAD1770071500577406 /* CCTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTransition.h; sourceTree = "<group>"; };
-		F4E87FAE1770071500577406 /* CCTransitionPageTurn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCTransitionPageTurn.cpp; sourceTree = "<group>"; };
-		F4E87FAF1770071500577406 /* CCTransitionPageTurn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTransitionPageTurn.h; sourceTree = "<group>"; };
-		F4E87FB01770071500577406 /* CCTransitionProgress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCTransitionProgress.cpp; sourceTree = "<group>"; };
-		F4E87FB11770071500577406 /* CCTransitionProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTransitionProgress.h; sourceTree = "<group>"; };
 		F4E87FB81770071500577406 /* CCClippingNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCClippingNode.cpp; sourceTree = "<group>"; };
 		F4E87FB91770071500577406 /* CCClippingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCClippingNode.h; sourceTree = "<group>"; };
 		F4E87FBA1770071500577406 /* CCClippingRegionNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCClippingRegionNode.cpp; sourceTree = "<group>"; };
@@ -1111,12 +1102,6 @@
 				F4E87FA91770071500577406 /* CCLayer.h */,
 				F4E87FAA1770071500577406 /* CCScene.cpp */,
 				F4E87FAB1770071500577406 /* CCScene.h */,
-				F4E87FAC1770071500577406 /* CCTransition.cpp */,
-				F4E87FAD1770071500577406 /* CCTransition.h */,
-				F4E87FAE1770071500577406 /* CCTransitionPageTurn.cpp */,
-				F4E87FAF1770071500577406 /* CCTransitionPageTurn.h */,
-				F4E87FB01770071500577406 /* CCTransitionProgress.cpp */,
-				F4E87FB11770071500577406 /* CCTransitionProgress.h */,
 			);
 			path = layers_scenes_transitions_nodes;
 			sourceTree = "<group>";
@@ -1538,10 +1523,7 @@
 				F4E8806B1770071600577406 /* CCLayer.cpp in Sources */,
 				F4E8806C1770071600577406 /* CCScene.cpp in Sources */,
 				19A749D01B80DD5F00CDCE08 /* ldo.c in Sources */,
-				F4E8806D1770071600577406 /* CCTransition.cpp in Sources */,
-				F4E8806E1770071600577406 /* CCTransitionPageTurn.cpp in Sources */,
 				19A749CA1B80DD5F00CDCE08 /* lbitlib.c in Sources */,
-				F4E8806F1770071600577406 /* CCTransitionProgress.cpp in Sources */,
 				F4E880721770071600577406 /* CCClippingNode.cpp in Sources */,
 				F4E880731770071600577406 /* CCClippingRegionNode.cpp in Sources */,
 				F4E880741770071600577406 /* CCMotionStreak.cpp in Sources */,

@@ -85,9 +85,6 @@ THE SOFTWARE.
 // layers_scenes_transitions_nodes
 #include "layers_scenes_transitions_nodes/CCLayer.h"
 #include "layers_scenes_transitions_nodes/CCScene.h"
-#include "layers_scenes_transitions_nodes/CCTransition.h"
-#include "layers_scenes_transitions_nodes/CCTransitionPageTurn.h"
-#include "layers_scenes_transitions_nodes/CCTransitionProgress.h"
 
 // misc_nodes
 #include "misc_nodes/CCClippingNode.h"
