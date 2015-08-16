@@ -32,7 +32,6 @@ THE SOFTWARE.
 #include "shaders/ccGLStateCache.h"
 #include "CCDirector.h"
 #include "support/TransformUtils.h"
-#include "draw_nodes/CCDrawingPrimitives.h"
 // extern
 #include "kazmath/GL/matrix.h"
 

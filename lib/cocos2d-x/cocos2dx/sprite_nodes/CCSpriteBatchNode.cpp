@@ -28,7 +28,6 @@
 #include "ccConfig.h"
 #include "CCSprite.h"
 #include "effects/CCGrid.h"
-#include "draw_nodes/CCDrawingPrimitives.h"
 #include "textures/CCTextureCache.h"
 #include "support/CCPointExtension.h"
 #include "shaders/CCShaderCache.h"

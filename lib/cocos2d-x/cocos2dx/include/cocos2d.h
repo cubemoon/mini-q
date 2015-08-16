@@ -58,11 +58,6 @@ THE SOFTWARE.
 #include "cocoa/CCZone.h"
 #include "cocoa/CCPointArray.h"
 
-// draw nodes
-#include "draw_nodes/CCDrawingPrimitives.h"
-#include "draw_nodes/CCDrawNode.h"
-#include "draw_nodes/CCShapeNode.h"
-
 // effects
 #include "effects/CCGrabber.h"
 #include "effects/CCGrid.h"

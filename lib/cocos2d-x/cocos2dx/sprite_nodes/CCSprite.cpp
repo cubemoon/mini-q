@@ -32,7 +32,6 @@
 #include "CCSpriteFrame.h"
 #include "CCSpriteFrameCache.h"
 #include "textures/CCTextureCache.h"
-#include "draw_nodes/CCDrawingPrimitives.h"
 #include "shaders/CCShaderCache.h"
 #include "shaders/ccGLStateCache.h"
 #include "shaders/CCGLProgram.h"

@@ -85,9 +85,6 @@
 		F4E880511770071600577406 /* CCSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F5E1770071500577406 /* CCSet.cpp */; };
 		F4E880521770071600577406 /* CCString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F601770071500577406 /* CCString.cpp */; };
 		F4E880531770071600577406 /* CCZone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F621770071500577406 /* CCZone.cpp */; };
-		F4E880541770071600577406 /* CCDrawingPrimitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F651770071500577406 /* CCDrawingPrimitives.cpp */; };
-		F4E880551770071600577406 /* CCDrawNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F671770071500577406 /* CCDrawNode.cpp */; };
-		F4E880561770071600577406 /* CCShapeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F691770071500577406 /* CCShapeNode.cpp */; };
 		F4E880571770071600577406 /* CCGrabber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F6C1770071500577406 /* CCGrabber.cpp */; };
 		F4E880581770071600577406 /* CCGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F6E1770071500577406 /* CCGrid.cpp */; };
 		F4E880591770071600577406 /* aabb.c in Sources */ = {isa = PBXBuildFile; fileRef = F4E87F8B1770071500577406 /* aabb.c */; };
@@ -344,12 +341,6 @@
 		F4E87F611770071500577406 /* CCString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCString.h; sourceTree = "<group>"; };
 		F4E87F621770071500577406 /* CCZone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCZone.cpp; sourceTree = "<group>"; };
 		F4E87F631770071500577406 /* CCZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCZone.h; sourceTree = "<group>"; };
-		F4E87F651770071500577406 /* CCDrawingPrimitives.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCDrawingPrimitives.cpp; sourceTree = "<group>"; };
-		F4E87F661770071500577406 /* CCDrawingPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDrawingPrimitives.h; sourceTree = "<group>"; };
-		F4E87F671770071500577406 /* CCDrawNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCDrawNode.cpp; sourceTree = "<group>"; };
-		F4E87F681770071500577406 /* CCDrawNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDrawNode.h; sourceTree = "<group>"; };
-		F4E87F691770071500577406 /* CCShapeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCShapeNode.cpp; sourceTree = "<group>"; };
-		F4E87F6A1770071500577406 /* CCShapeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCShapeNode.h; sourceTree = "<group>"; };
 		F4E87F6C1770071500577406 /* CCGrabber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCGrabber.cpp; sourceTree = "<group>"; };
 		F4E87F6D1770071500577406 /* CCGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCGrabber.h; sourceTree = "<group>"; };
 		F4E87F6E1770071500577406 /* CCGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCGrid.cpp; sourceTree = "<group>"; };
@@ -841,7 +832,6 @@
 				F477B7421757404200260C19 /* CCScheduler.h */,
 				F4E87F471770071500577406 /* cocoa */,
 				F477B75C1757404200260C19 /* cocos2d.cpp */,
-				F4E87F641770071500577406 /* draw_nodes */,
 				F4E87F6B1770071500577406 /* effects */,
 				F4E87F701770071500577406 /* include */,
 				F4E87F781770071500577406 /* kazmath */,
@@ -987,19 +977,6 @@
 				F4E87F631770071500577406 /* CCZone.h */,
 			);
 			path = cocoa;
-			sourceTree = "<group>";
-		};
-		F4E87F641770071500577406 /* draw_nodes */ = {
-			isa = PBXGroup;
-			children = (
-				F4E87F651770071500577406 /* CCDrawingPrimitives.cpp */,
-				F4E87F661770071500577406 /* CCDrawingPrimitives.h */,
-				F4E87F671770071500577406 /* CCDrawNode.cpp */,
-				F4E87F681770071500577406 /* CCDrawNode.h */,
-				F4E87F691770071500577406 /* CCShapeNode.cpp */,
-				F4E87F6A1770071500577406 /* CCShapeNode.h */,
-			);
-			path = draw_nodes;
 			sourceTree = "<group>";
 		};
 		F4E87F6B1770071500577406 /* effects */ = {
@@ -1532,10 +1509,7 @@
 				F4E880511770071600577406 /* CCSet.cpp in Sources */,
 				F4E880521770071600577406 /* CCString.cpp in Sources */,
 				F4E880531770071600577406 /* CCZone.cpp in Sources */,
-				F4E880541770071600577406 /* CCDrawingPrimitives.cpp in Sources */,
 				19A749DB1B80DD5F00CDCE08 /* lopcodes.c in Sources */,
-				F4E880551770071600577406 /* CCDrawNode.cpp in Sources */,
-				F4E880561770071600577406 /* CCShapeNode.cpp in Sources */,
 				F4E880571770071600577406 /* CCGrabber.cpp in Sources */,
 				F4E880581770071600577406 /* CCGrid.cpp in Sources */,
 				19A749C71B80DD5F00CDCE08 /* lapi.c in Sources */,

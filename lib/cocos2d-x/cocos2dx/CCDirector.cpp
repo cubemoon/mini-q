@@ -30,7 +30,6 @@ THE SOFTWARE.
 // cocos2d includes
 #include "CCDirector.h"
 #include "ccFPSImages.h"
-#include "draw_nodes/CCDrawingPrimitives.h"
 #include "CCConfiguration.h"
 #include "cocoa/CCNS.h"
 #include "layers_scenes_transitions_nodes/CCScene.h"
@@ -726,7 +725,6 @@ void CCDirector::purgeDirector()
     CCLabelBMFont::purgeCachedData();
 
     // purge all managed caches
-    ccDrawFree();
     CCAnimationCache::purgeSharedAnimationCache();
     CCSpriteFrameCache::purgeSharedSpriteFrameCache();
     CCTextureCache::purgeSharedTextureCache();

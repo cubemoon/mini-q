@@ -31,7 +31,6 @@
 #include "shaders/CCShaderCache.h"
 #include "CCDirector.h"
 #include "support/CCPointExtension.h"
-#include "draw_nodes/CCDrawingPrimitives.h"
 
 NS_CC_BEGIN
 
@@ -256,8 +255,9 @@ void CCClippingNode::visit()
     glStencilOp(!m_bInverted ? GL_ZERO : GL_REPLACE, GL_KEEP, GL_KEEP);
     
     // draw a fullscreen solid rectangle to clear the stencil buffer
-    //ccDrawSolidRect(CCPointZero, ccpFromSize([[CCDirector sharedDirector] winSize]), ccc4f(1, 1, 1, 1));
-    ccDrawSolidRect(CCPointZero, ccpFromSize(CCDirector::sharedDirector()->getWinSize()), ccc4f(1, 1, 1, 1));
+    // Jimmy - 2015-08-16 start
+    //ccDrawSolidRect(CCPointZero, ccpFromSize(CCDirector::sharedDirector()->getWinSize()), ccc4f(1, 1, 1, 1));
+    // Jimmy - 2015-08-16 end
     
     ///////////////////////////////////
     // DRAW CLIPPING STENCIL
