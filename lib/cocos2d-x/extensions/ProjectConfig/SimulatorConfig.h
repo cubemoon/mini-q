@@ -39,22 +39,7 @@ using namespace cocos2d;
 class ProjectConfig
 {
 public:
-    ProjectConfig(void)
-    : m_isWelcome(false)
-	, m_scriptFile("$PROJDIR/scripts/main.lua")
-    , m_writablePath("")
-    , m_packagePath("")
-    , m_frameSize(960, 640)
-    , m_frameScale(1.0f)
-    , m_showConsole(true)
-    , m_loadPrecompiledFramework(true)
-    , m_writeDebugLogToFile(true)
-    , m_windowOffset(0, 0)
-    , m_debuggerType(kCCLuaDebuggerNone)
-    , m_exitWhenRelaunch(false)
-    {
-        normalize();
-    }
+    ProjectConfig(void);
 
     static const int DEFAULT_WIDTH = 640;
     static const int DEFAULT_HEIGHT = 960;
