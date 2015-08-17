@@ -63,22 +63,6 @@ using namespace cocos2d;
     hasPopupDialog = NO;
     debugLogFile = 0;
 
-    // load QUICK_COCOS2D_MINI from ~/.QUICK_COCOS2D_MINI
-    NSMutableString *path = [NSMutableString stringWithString:NSHomeDirectory()];
-    [path appendString:@"/.QUICK_COCOS2D_MINI"];
-    NSError *error = nil;
-    NSString *env = [NSString stringWithContentsOfFile:path
-                                              encoding:NSUTF8StringEncoding
-                                                 error:&error];
-    if (error || env.length == 0)
-    {
-        [self showAlertWithoutSheet:@"Please run \"setup.app\", set quick-cocos2d-x root path." withTitle:@"quick player error"];
-        [[NSApplication sharedApplication] terminate:self];
-    }
-
-    env = [env stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    SimulatorConfig::sharedDefaults()->setQuickCocos2dxRootPath([env cStringUsingEncoding:NSUTF8StringEncoding]);
-
     [self updateProjectConfigFromCommandLineArgs:&projectConfig];
     [self createWindowAndGLView];
     [self startup];
@@ -126,7 +110,7 @@ using namespace cocos2d;
     if (dup2(outfd, fileno(stderr)) != fileno(stderr) || dup2(outfd, fileno(stdout)) != fileno(stdout))
     {
         perror("Unable to redirect output");
-        [self showAlert:@"Unable to redirect output to console!" withTitle:@"quick player error"];
+        [self showAlert:@"Unable to redirect output to console!" withTitle:@"mini-q error"];
     }
     else
     {
@@ -162,7 +146,7 @@ using namespace cocos2d;
 
     // set window parameters
     [window setContentView:glView];
-    [window setTitle:@"quick player"];
+    [window setTitle:@"mini-q"];
     [window center];
 
     if (projectConfig.getProjectDir().length())
@@ -231,8 +215,6 @@ using namespace cocos2d;
 {
     NSMutableArray *recents = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] arrayForKey:@"recents"]];
 
-    NSString *welcomeTitle = [NSString stringWithFormat:@"%splayer/welcome/", SimulatorConfig::sharedDefaults()->getQuickCocos2dxRootPath().c_str()];
-
     for (NSInteger i = [recents count] - 1; i >= 0; --i)
     {
         id recentItem = [recents objectAtIndex:i];
@@ -243,14 +225,14 @@ using namespace cocos2d;
         }
 
         NSString *title = [recentItem objectForKey:@"title"];
-        if (!title || [title length] == 0 || [welcomeTitle compare:title] == NSOrderedSame || !CCFileUtils::sharedFileUtils()->isDirectoryExist([title cStringUsingEncoding:NSUTF8StringEncoding]))
+        if (!title || [title length] == 0 || !CCFileUtils::sharedFileUtils()->isDirectoryExist([title cStringUsingEncoding:NSUTF8StringEncoding]))
         {
             [recents removeObjectAtIndex:i];
         }
     }
 
     NSString *title = [NSString stringWithCString:projectConfig.getProjectDir().c_str() encoding:NSUTF8StringEncoding];
-    if ([title length] > 0 && [welcomeTitle compare:title] != NSOrderedSame)
+    if ([title length] > 0)
     {
         for (NSInteger i = [recents count] - 1; i >= 0; --i)
         {
@@ -366,7 +348,7 @@ using namespace cocos2d;
         [menuRecents insertItem:item atIndex:0];
     }
 
-    [window setTitle:[NSString stringWithFormat:@"quick player (%0.0f%%)", projectConfig.getFrameScale() * 100]];
+    [window setTitle:[NSString stringWithFormat:@"mini-q (%0.0f%%)", projectConfig.getFrameScale() * 100]];
 }
 
 - (void) showModelSheet
@@ -412,11 +394,6 @@ using namespace cocos2d;
         args.push_back([[nsargs objectAtIndex:i] cStringUsingEncoding:NSUTF8StringEncoding]);
     }
     config->parseCommandLine(args);
-
-    if (config->getProjectDir().length() == 0)
-    {
-        config->resetToWelcome();
-    }
 }
 
 - (void) launch:(NSArray*)args
@@ -590,7 +567,6 @@ using namespace cocos2d;
 
 - (IBAction) onFileNewProject:(id)sender
 {
-//    [self showAlert:@"Coming soon :-)" withTitle:@"quick-player"];
     [self showModelSheet];
     CreateNewProjectDialogController *controller = [[CreateNewProjectDialogController alloc] initWithWindowNibName:@"CreateNewProjectDialog"];
     [NSApp beginSheet:controller.window modalForWindow:window didEndBlock:^(NSInteger returnCode) {
