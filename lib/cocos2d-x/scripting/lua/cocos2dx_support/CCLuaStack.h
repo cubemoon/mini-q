@@ -173,6 +173,7 @@ public:
     static int lua_execute(lua_State *L, int numArgs, bool removeResult);
     static int lua_loadChunksFromZIP(lua_State *L);
     static int lua_loadbuffer(lua_State *L, const char *chunk, int chunkSize, const char *chunkName);
+    static void dumpStack(lua_State *L);
 };
 
 NS_CC_END

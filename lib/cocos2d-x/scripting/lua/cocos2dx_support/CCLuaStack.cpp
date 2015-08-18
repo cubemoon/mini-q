@@ -50,6 +50,7 @@ extern "C" {
 
 #include "Cocos2dxLuaLoader.h"
 
+#include <sstream>
 #include <string>
 
 using namespace std;
@@ -701,6 +702,32 @@ int CCLuaStack::lua_loadbuffer(lua_State *L, const char *chunk, int chunkSize, c
     }
 #endif
     return r;
+}
+
+void CCLuaStack::dumpStack(lua_State *L)
+{
+    std::stringstream buf;
+    int stackSize = lua_gettop(L);
+    for (int idx = 1; idx <= stackSize; idx++)
+    {
+        switch (lua_type(L, idx)) {
+            case LUA_TNUMBER:        buf << " number";       break;
+            case LUA_TTABLE:         buf << " table";        break;
+            case LUA_TBOOLEAN:       buf << " bool";         break;
+            case LUA_TNIL:           buf << " nil";          break;
+            case LUA_TNONE:          buf << " none";         break;
+            case LUA_TFUNCTION:      buf << " function";     break;
+            case LUA_TSTRING:        buf << " string";       break;
+            case LUA_TUSERDATA:      buf << " userdata";     break;
+            case LUA_TLIGHTUSERDATA: buf << " lightuserdata"; break;
+        }
+        buf << "[" << idx << "]";
+        buf << "[" << idx - stackSize - 1 << "]";
+    }
+    
+    CCLOG("dump lua stack.");
+    CCLOG("%s", buf.str().c_str());
+    CCLOG("dump lua stack end.");
 }
 
 int CCLuaStack::executeFunctionReturnArray(int nHandler,int nNumArgs,int nNummResults,CCArray* pResultArray)
