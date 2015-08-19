@@ -248,9 +248,6 @@
 		2EBA846A191B6A8400256D60 /* CCScriptEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScriptEventDispatcher.h; sourceTree = "<group>"; };
 		4983220C187FE0A900733BFB /* HelperFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelperFunc.cpp; sourceTree = "<group>"; };
 		4983220D187FE0A900733BFB /* HelperFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperFunc.h; sourceTree = "<group>"; };
-		9FBF93041B7B4230009BA558 /* fflua.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fflua.h; sourceTree = "<group>"; };
-		9FBF93051B7B4230009BA558 /* fflua_register.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fflua_register.h; sourceTree = "<group>"; };
-		9FBF93061B7B4230009BA558 /* fflua_type.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fflua_type.h; sourceTree = "<group>"; };
 		F414F4451961EB5D007C18E4 /* CCTouchTargetNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCTouchTargetNode.cpp; sourceTree = "<group>"; };
 		F414F4461961EB5D007C18E4 /* CCTouchTargetNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTouchTargetNode.h; sourceTree = "<group>"; };
 		F426146617E816FE00D37B8D /* CCCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCCommon.cpp; sourceTree = "<group>"; };
@@ -665,17 +662,6 @@
 			path = apptools;
 			sourceTree = "<group>";
 		};
-		9FBF93031B7B4230009BA558 /* fflua */ = {
-			isa = PBXGroup;
-			children = (
-				9FBF93041B7B4230009BA558 /* fflua.h */,
-				9FBF93051B7B4230009BA558 /* fflua_register.h */,
-				9FBF93061B7B4230009BA558 /* fflua_type.h */,
-			);
-			name = fflua;
-			path = lua/fflua;
-			sourceTree = "<group>";
-		};
 		F41D98F517F08B90007171D8 /* external */ = {
 			isa = PBXGroup;
 			children = (
@@ -883,7 +869,6 @@
 		F4DE0AB01680023C005DB2DB /* scripting */ = {
 			isa = PBXGroup;
 			children = (
-				9FBF93031B7B4230009BA558 /* fflua */,
 				F4DE0AB116800248005DB2DB /* lua */,
 			);
 			path = scripting;
