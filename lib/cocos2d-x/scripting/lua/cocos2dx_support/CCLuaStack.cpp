@@ -711,23 +711,21 @@ void CCLuaStack::dumpStack(lua_State *L)
     for (int idx = 1; idx <= stackSize; idx++)
     {
         switch (lua_type(L, idx)) {
-            case LUA_TNUMBER:        buf << " number";       break;
-            case LUA_TTABLE:         buf << " table";        break;
-            case LUA_TBOOLEAN:       buf << " bool";         break;
-            case LUA_TNIL:           buf << " nil";          break;
-            case LUA_TNONE:          buf << " none";         break;
-            case LUA_TFUNCTION:      buf << " function";     break;
-            case LUA_TSTRING:        buf << " string";       break;
-            case LUA_TUSERDATA:      buf << " userdata";     break;
-            case LUA_TLIGHTUSERDATA: buf << " lightuserdata"; break;
+            case LUA_TNUMBER:        buf << "number";       break;
+            case LUA_TTABLE:         buf << "table";        break;
+            case LUA_TBOOLEAN:       buf << "bool";         break;
+            case LUA_TNIL:           buf << "nil";          break;
+            case LUA_TNONE:          buf << "none";         break;
+            case LUA_TFUNCTION:      buf << "function";     break;
+            case LUA_TSTRING:        buf << "string";       break;
+            case LUA_TUSERDATA:      buf << "userdata";     break;
+            case LUA_TLIGHTUSERDATA: buf << "lightuserdata"; break;
         }
         buf << "[" << idx << "]";
-        buf << "[" << idx - stackSize - 1 << "]";
+        buf << "[" << idx - stackSize - 1 << "] ";
     }
     
-    CCLOG("dump lua stack.");
-    CCLOG("%s", buf.str().c_str());
-    CCLOG("dump lua stack end.");
+    CCLOG("[LUA STACK] %s", buf.str().c_str());
 }
 
 int CCLuaStack::executeFunctionReturnArray(int nHandler,int nNumArgs,int nNummResults,CCArray* pResultArray)
